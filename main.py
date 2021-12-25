@@ -14,7 +14,8 @@ def pst():
     }
     r0 = requests.post ( url0 , data=data0 , headers=headers ).text
     if 'Invalid API Key provided' and '"message"' in r0 :
-        jk = {'API_DEV_BY' : 'NOUREDINE_KAOINE' , 'message' : "'Invalid API Key provided" ,
+        msg = r0.split ( '"message": "' )[1].split ( '",' )[0]
+        jk = {'API_DEV_BY' : 'NOUREDINE_KAOINE' , 'message' : f"{msg}" ,
               'STATUS' : 'SK DEAD '}
         js = json.dumps ( jk )
         return js
