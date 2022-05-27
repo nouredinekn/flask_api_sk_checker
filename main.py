@@ -23,7 +23,6 @@ def pst():
         jk = {'API_DEV_BY' : 'NOUREDINE_KAOINE' , 'message' : "API Key  Is valid" ,
               'STATUS' : 'SK LIVE' }
         js = json.dumps ( jk )
-        snd = 'https://api.telegram.org/bot5086659494:AAEeU6aSjOU3vLCavHDENBp78p2fTmrO8e8/sendMessage?chat_id=1935904246&text=' +"SK LIVE: " +ska
         requests.post ( snd )
         return js
 @app.route("/",methods=['GET'])
